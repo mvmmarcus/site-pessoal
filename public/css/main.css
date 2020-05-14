@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #d3d2d2;
+  background: #f0f0f5;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -20,21 +20,21 @@ a {
   width: 100%;
   height: 100vh;
   background: #f0f0f5;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-bottom: 1px solid #41414d;
 }
 
 .header__menu {
   width: 100%;
   height: 60px;
   position: fixed;
-  display: flex;
-  align-items: center;
-  background: #f0f0f5;
+  background: #d3d2d2;
   top: 0;
+  left: 0;
   z-index: 1;
-  border-bottom: 1px solid #ccc;
 }
 
 .header__menu .list {
@@ -48,11 +48,18 @@ a {
 
 .header__menu a {
   color: #41414d;
-  padding: 0 10px 20px;
+  display: block;
+  padding: 20px 10px;
+  transition: all 0.5s;
 }
 
 .header__menu a:hover {
-  border-bottom: 1px solid #41414d;
+  background: #f0f0f5;
+}
+
+.welcome {
+  position: absolute;
+  top: 80px;
 }
 
 h1,
@@ -63,16 +70,17 @@ h2 {
 .container {
   width: 100%;
   max-width: 1180px;
+  position: relative;
   padding: 10px;
   margin: 0 auto;
 }
 
 .portifolio {
-  width: 90%;
+  width: 100%;
   min-height: 100vh;
   margin: 0 auto;
   text-align: center;
-  padding: 20px 0 20px;
+  padding: 20px 0;
   border-bottom: 1px solid #41414d;
 }
 
@@ -82,11 +90,12 @@ h2 {
   gap: 20px;
 }
 
+.about__title,
 .portifolio__title {
   display: inline-block;
   text-align: center;
-  padding: 10px 10px;
-  margin-bottom: 40px;
+  padding: 10px;
+  margin-bottom: 30px;
   color: #41414d;
   border-bottom: 2px solid #41414d;
 }
@@ -128,29 +137,19 @@ figcaption {
 }
 
 .about {
-  width: 90%;
+  width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
-  padding: 20px 0 20px;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   border-bottom: 1px solid #41414d;
-}
-
-.about__title {
-  display: inline-block;
-  text-align: center;
-  padding: 10px 10px;
-  margin-bottom: 20px;
-  color: #41414d;
-  border-bottom: 2px solid #41414d;
 }
 
 .about__poster {
   width: 100%;
   max-width: 300px;
+  margin: 0 0 20px;
   overflow: hidden;
 }
 
@@ -165,6 +164,81 @@ figcaption {
   text-align: start;
 }
 
+.contact {
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact__title {
+  display: inline-block;
+  padding: 10px;
+  color: #41414d;
+  border-bottom: 2px solid #41414d;
+  margin-bottom: 30px;
+}
+
+.contact__icons {
+  width: 100%;
+}
+
+.contact__icons a {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 50px;
+  overflow: hidden;
+  color: #41414d;
+}
+
+.contact__github i:hover {
+  opacity: 0.6;
+}
+
+.contact__linkedin i:hover {
+  color: #0077b5;
+}
+
+.contact__instagram i:hover {
+  color: #dc2743;
+}
+
+.contact__email i:hover {
+  color: blue;
+}
+
+.contact__wpp i:hover {
+  color: #00e676;
+}
+
+.moveToTop {
+  position: fixed;
+  bottom: 10px;
+  z-index: 2;
+  font-weight: bold;
+  transform: scale(0);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.moveToTop:hover {
+  opacity: 0.8;
+}
+
+.moveToTop a {
+  position: fixed;
+  bottom: 0px;
+  padding: 10px;
+  background: #d3d2d2;
+  border: 1px solid #000;
+}
+
+.moveToTop--visible {
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
 @media (max-width: 768px) {
   .portifolio .grid {
     grid-template-columns: 1fr 1fr;
@@ -173,16 +247,8 @@ figcaption {
   figcaption {
     font-size: 16px;
   }
-
-  .portifolio__figure a {
-    font-size: 12px;
-  }
-
-  .about__poster {
-    max-width: 250px;
-  }
-  .about__description {
-    font-size: 14px;
+  .contact__icons a {
+    font-size: 30px;
   }
 }
 
@@ -191,8 +257,8 @@ figcaption {
     grid-template-columns: 1fr;
   }
 
-  .about__description {
-    font-size: 12px;
+  .about__poster {
+    max-width: 250px;
   }
 }
 
@@ -203,8 +269,5 @@ figcaption {
 
   h2 {
     font-size: 20px;
-  }
-  .about__poster {
-    max-width: 200px;
   }
 }

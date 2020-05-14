@@ -10,21 +10,47 @@
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/ea27ce0335.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <header class="header">
-      <nav class="header__menu">
-        <ul class="list">
-          <li class="list__item"><a href="#about">Sobre</a></li>
-          <li class="list__item"><a href="#portifolio">Portifólio</a></li>
-          <li class="list__item"><a href="#contact">Contato</a></li>
-        </ul>
-      </nav>
-      <h1 class="name">Marcus Vinícius</h1>
-      <h2 class="profession">Jr. Full Stack Developer</h2>
-    </header>
     <div class="container">
+      <header id="top" class="header">
+        <nav class="header__menu">
+          <ul class="list">
+            <li class="list__item"><a href="#about">Sobre</a></li>
+            <li class="list__item"><a href="#portifolio">Portifólio</a></li>
+            <li class="list__item"><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+        <h2 class="welcome" >Olá, seja bem vindo (a) ao meu site !</h2>
+        <h1 class="name">Marcus Vinícius</h1>
+        <h2 class="profession">Jr. Full Stack Developer</h2>
+      </header>
+
+      <section id="about" class="about">
+        <h2 class="about__title">Sobre</h2>
+        <figure class="about__poster">
+          <img
+            src="../assets/marcus-profile.jpg"
+            alt="Marcus Profile"
+            class="about__img"
+          />
+        </figure>
+        <p class="about__description">
+          Olá, meu nome é Marcus Vinícius. Sou goiano e tenho 23 anos de idade.
+          Sou graduando no curso de Engenharia de Computação pela Universidade
+          Federal de Goiás - Goiânia, com conclusão prevista para 2022. Comecei
+          a me aventurar no mundo do desenvolvimento a cerca de 1 ano e não
+          parei mais. Desenvolver é algo muito estimulante e desafiador, cada
+          conquista e desafio superado te entusiasma a querer sempre aprender
+          mais e mais e esse é um dos principais fatores por eu ter me
+          apaixonado por essa área e querer me tornar um desenvolver.
+        </p>
+      </section>
       <section id="portifolio" class="portifolio">
         <h2 class="portifolio__title">Portifólio</h2>
         <div class="grid">
@@ -94,26 +120,44 @@
           </figure>
         </div>
       </section>
-      <section id="about" class="about">
-        <h2 class="about__title">Sobre</h2>
-        <figure class="about__poster">
-          <img
-            src="../assets/marcus-profile.jpg"
-            alt="Marcus Profile"
-            class="about__img"
-          />
-        </figure>
-        <p class="about__description">
-          Olá, meu nome é Marcus Vinícius. Sou goiano e tenho 23 anos de idade.
-          Sou graduando no curso de Engenharia de Computação pela Universidade
-          Federal de Goiás - Goiânia, com conclusão prevista para 2022. Comecei
-          a me aventurar no mundo do desenvolvimento a cerca de 1 ano e não
-          parei mais. Desenvolver é algo muito estimulante e desafiador, cada
-          conquista e desafio superado te entusiasma a querer sempre aprender
-          mais e mais e esse é um dos principais fatores por eu ter me
-          apaixonado por essa área e querer me tornar um desenvolver.
-        </p>
+      <section id="contact" class="contact">
+        <h2 class="contact__title">Contato</h2>
+        <div class="contact__icons">
+          <a href="https://github.com/mvmmarcus" class="contact__github">
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mvmmarcus/"
+            class="contact__linkedin"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/omarcus_vm/"
+            class="contact__instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            class="contact__email"
+            href="mailto:marcus.vinicius.marques@hotmail.com?subject=&body=Olá, fico feliz pelo contato :)"
+            title=""
+          >
+            <i class="far fa-envelope"></i>
+          </a>
+          <a
+            class="contact__wpp"
+            href="https://api.whatsapp.com/send?1=pt_BR&phone=5562993131103"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
       </section>
+      <div title="Ir para o topo" id="moveToTop" class="moveToTop">
+        <a href="#top">
+          /\
+        </a>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
