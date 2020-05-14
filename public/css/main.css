@@ -1,0 +1,210 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #d3d2d2;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: #f0f0f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__menu {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background: #f0f0f5;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.header__menu .list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.header__menu a {
+  color: #41414d;
+  padding: 0 10px 20px;
+}
+
+.header__menu a:hover {
+  border-bottom: 1px solid #41414d;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.portifolio {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0 20px;
+  border-bottom: 1px solid #41414d;
+}
+
+.portifolio .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.portifolio__title {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 10px;
+  margin-bottom: 40px;
+  color: #41414d;
+  border-bottom: 2px solid #41414d;
+}
+
+.portifolio__figure {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.portifolio__poster {
+  width: 100%;
+  overflow: hidden;
+}
+
+.portifolio__img {
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.portifolio__img:hover {
+  transform: scale(1.1);
+}
+
+figcaption {
+  color: #000;
+  font-weight: 700;
+  margin-top: 5px;
+  line-height: 20px;
+}
+.portifolio__figure a {
+  color: #000;
+  font-size: 14px;
+}
+
+.portifolio__figure a:hover {
+  text-decoration: underline;
+}
+
+.about {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #41414d;
+}
+
+.about__title {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  color: #41414d;
+  border-bottom: 2px solid #41414d;
+}
+
+.about__poster {
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.about__img {
+  width: 100%;
+  height: auto;
+}
+
+.about__description {
+  width: 100%;
+  max-width: 600px;
+  text-align: start;
+}
+
+@media (max-width: 768px) {
+  .portifolio .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  figcaption {
+    font-size: 16px;
+  }
+
+  .portifolio__figure a {
+    font-size: 12px;
+  }
+
+  .about__poster {
+    max-width: 250px;
+  }
+  .about__description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portifolio .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__description {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  .about__poster {
+    max-width: 200px;
+  }
+}
