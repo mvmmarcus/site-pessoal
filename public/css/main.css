@@ -126,7 +126,7 @@ h2 {
   margin: 0 auto;
 }
 
-.portifolio {
+.portfolio {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
@@ -135,14 +135,14 @@ h2 {
   border-bottom: 1px solid #41414d;
 }
 
-.portifolio .grid {
+.portfolio .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 
 .about__title,
-.portifolio__title {
+.portfolio__title {
   display: inline-block;
   text-align: center;
   padding: 10px;
@@ -151,26 +151,26 @@ h2 {
   border-bottom: 2px solid #41414d;
 }
 
-.portifolio__figure {
+.portfolio__figure {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
 
-.portifolio__poster {
+.portfolio__poster {
   width: 100%;
   overflow: hidden;
   border: 1px solid #000;
 
 }
 
-.portifolio__img {
+.portfolio__img {
   width: 100%;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
-.portifolio__img:hover {
+.portfolio__img:hover {
   transform: scale(1.1);
 }
 
@@ -180,12 +180,12 @@ figcaption {
   margin-top: 5px;
   line-height: 20px;
 }
-.portifolio__figure a {
+.portfolio__figure a {
   color: #000;
   font-size: 14px;
 }
 
-.portifolio__figure a:hover {
+.portfolio__figure a:hover {
   text-decoration: underline;
 }
 
@@ -304,7 +304,7 @@ figcaption {
 }
 
 @media (max-width: 768px) {
-  .portifolio .grid {
+  .portfolio .grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -317,7 +317,7 @@ figcaption {
 }
 
 @media (max-width: 480px) {
-  .portifolio .grid {
+  .portfolio .grid {
     grid-template-columns: 1fr;
   }
 
