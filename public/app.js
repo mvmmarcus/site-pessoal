@@ -1,8 +1,5 @@
-const menuItems = document.querySelectorAll(
-  "a[href^='#']" || "div[id^='m']"
-);
+const menuItems = document.querySelectorAll("a[href^='#']" || "div[id^='m']");
 menuItems.forEach((item) => {
-  console.log(item)
   item.addEventListener("click", scrollToIdOnClick);
 });
 

@@ -20,6 +20,8 @@ a {
   width: 100%;
   height: 100vh;
   background: #f0f0f5;
+  align-items: center;
+  padding: 10px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -52,7 +54,7 @@ a {
   padding: 20px 10px;
   transition: all 0.5s;
 }
-
+.header__menu a:active,
 .header__menu a:hover {
   background: #f0f0f5;
 }
@@ -60,6 +62,25 @@ a {
 .welcome {
   position: absolute;
   top: 80px;
+}
+
+.welcome,
+.name,
+.profession {
+  animation-name: teste;
+  animation-duration: 1s;
+  transition: all 1s;
+}
+
+@keyframes teste {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 h1,
@@ -117,6 +138,7 @@ h2 {
   transition: all 0.2s ease-in-out;
 }
 
+.portifolio__img:active,
 .portifolio__img:hover {
   transform: scale(1.1);
 }
@@ -132,6 +154,7 @@ figcaption {
   font-size: 14px;
 }
 
+.portifolio__figure a:active,
 .portifolio__figure a:hover {
   text-decoration: underline;
 }
@@ -166,7 +189,7 @@ figcaption {
 
 .contact {
   width: 100%;
-  height: auto;
+  min-height: auto;
   padding: 20px 0;
   margin: 0 auto;
   text-align: center;
@@ -192,22 +215,27 @@ figcaption {
   color: #41414d;
 }
 
+.contact__github i:active,
 .contact__github i:hover {
   opacity: 0.6;
 }
 
+.contact__linkedin i:active,
 .contact__linkedin i:hover {
   color: #0077b5;
 }
 
+.contact__instagram i:active,
 .contact__instagram i:hover {
   color: #dc2743;
 }
 
+.contact__email i:active,
 .contact__email i:hover {
   color: blue;
 }
 
+.contact__wpp i:active,
 .contact__wpp i:hover {
   color: #00e676;
 }
@@ -222,14 +250,17 @@ figcaption {
   cursor: pointer;
 }
 
+.moveToTop:active,
 .moveToTop:hover {
   opacity: 0.8;
 }
 
 .moveToTop a {
   position: fixed;
+  opacity: 0.8;
   bottom: 0px;
   padding: 10px;
+  color: #000;
   background: #d3d2d2;
   border: 1px solid #000;
 }
