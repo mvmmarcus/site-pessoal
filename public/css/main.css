@@ -23,6 +23,7 @@ a {
   align-items: center;
   padding: 10px;
   margin: 0 auto;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,6 +35,7 @@ a {
   height: 60px;
   position: fixed;
   background: #d3d2d2;
+  box-shadow: 0px 0px 9px 3px rgba(41,41,41,.40);
   top: 0;
   left: 0;
   z-index: 1;
@@ -52,30 +54,58 @@ a {
   color: #41414d;
   display: block;
   padding: 20px 10px;
+}
+
+.touch {
+  animation-name: touched;
+  animation-duration: 0.5s;
   transition: all 0.5s;
 }
 
-.header__menu a:hover {
-  background: #f0f0f5;
+@keyframes touched {
+  from {
+    opacity: 0.6;
+    transform: scale(0.6);
+
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .welcome {
   position: absolute;
   top: 80px;
+  font-weight: 500;
 }
 
 .welcome,
 .name,
-.profession {
+.profession,
+.curriculo {
   animation-name: teste;
   animation-duration: 1s;
   transition: all 1s;
 }
 
+.curriculo {
+  position: absolute;
+  padding: 10px;
+  bottom: 60px;
+  font-size: 20px;
+  color: #000;
+}
+
+.curriculo i{
+  margin-right: 20px;
+  font-size: 24px;
+} 
+
 @keyframes teste {
   from {
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(0);
   }
   to {
     opacity: 1;
@@ -130,6 +160,8 @@ h2 {
 .portifolio__poster {
   width: 100%;
   overflow: hidden;
+  border: 1px solid #000;
+
 }
 
 .portifolio__img {
@@ -137,7 +169,6 @@ h2 {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-
 
 .portifolio__img:hover {
   transform: scale(1.1);
@@ -153,7 +184,6 @@ figcaption {
   color: #000;
   font-size: 14px;
 }
-
 
 .portifolio__figure a:hover {
   text-decoration: underline;
@@ -215,26 +245,21 @@ figcaption {
   color: #41414d;
 }
 
-
 .contact__github i:hover {
   opacity: 0.6;
 }
-
 
 .contact__linkedin i:hover {
   color: #0077b5;
 }
 
-
 .contact__instagram i:hover {
   color: #dc2743;
 }
 
-
 .contact__email i:hover {
   color: blue;
 }
-
 
 .contact__wpp i:hover {
   color: #00e676;
@@ -242,11 +267,13 @@ figcaption {
 
 .moveToTop {
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   z-index: 2;
   font-weight: bold;
   transform: scale(0);
-  transition: all 0.3s;
+  transform: translateY(60px);
+  transition: all 1s;
+  opacity: 0;
   cursor: pointer;
 }
 
@@ -256,17 +283,24 @@ figcaption {
 
 .moveToTop a {
   position: fixed;
+  border-radius: 100%;
   opacity: 0.8;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 0px;
-  padding: 10px;
+  padding: 8px;
   color: #000;
-  background: #d3d2d2;
+  background: #f0f0f5;
   border: 1px solid #000;
 }
 
 .moveToTop--visible {
   transform: scale(1);
-  transition: all 0.3s;
+  opacity: 1;
+  transition: all 1s;
 }
 
 @media (max-width: 768px) {

@@ -21,21 +21,30 @@
       <header id="top" class="header">
         <nav class="header__menu">
           <ul class="list">
-            <li class="list__item"><a href="#about">Sobre</a></li>
-            <li class="list__item"><a href="#portifolio">Portifólio</a></li>
-            <li class="list__item"><a href="#contact">Contato</a></li>
+            <li class="list__item"><a id="btnAbout" href="#about">Sobre</a></li>
+            <li class="list__item">
+              <a id="btnPortifolio" href="#portifolio">Portifólio</a>
+            </li>
+            <li class="list__item">
+              <a id="btnContact" href="#contact">Contato</a>
+            </li>
           </ul>
         </nav>
-        <h2 class="welcome" >Olá, seja bem vindo (a) ao meu site !!</h2>
+        <h2 class="welcome">Olá, seja bem vindo (a) ao meu site :)</h2>
         <h1 id="name" class="name">Marcus Vinícius</h1>
         <h2 class="profession">Jr. Full Stack Developer</h2>
+        <a
+          href="https://drive.google.com/file/d/1eQF2dsAoTVJ4BVjBMg1YwTSWUTdVyWb6/view"
+          class="curriculo"
+          ><i class="far fa-file-alt"></i>Visualizar Currículo</a
+        >
       </header>
 
       <section id="about" class="about">
         <h2 class="about__title">Sobre</h2>
         <figure class="about__poster">
           <img
-            src="../assets/marcus-profile.jpg"
+            src="./assets/marcus-profile.jpg"
             alt="Marcus Profile"
             class="about__img"
           />
@@ -48,7 +57,7 @@
           parei mais. Desenvolver é algo muito estimulante e desafiador, cada
           conquista e desafio superado te entusiasma a querer sempre aprender
           mais e mais e esse é um dos principais fatores por eu ter me
-          apaixonado por essa área e querer me tornar um desenvolver.
+          apaixonado por essa área e querer me tornar desenvolvedor.
         </p>
       </section>
       <section id="portifolio" class="portifolio">
@@ -57,7 +66,7 @@
           <figure class="portifolio__figure">
             <div class="portifolio__poster">
               <img
-                src="../assets/e-commerce-fashionista-react.png"
+                src="./assets/e-commerce-fashionista-react.png"
                 alt="fashionista desktop"
                 class="portifolio__img"
               />
@@ -74,7 +83,40 @@
           <figure class="portifolio__figure">
             <div class="portifolio__poster">
               <img
-                src="../assets/react-app-contacts.png"
+                src="./assets/be-the-hero.png"
+                alt="be the hero"
+                class="portifolio__img"
+              />
+            </div>
+
+            <figcaption>
+              Be The Hero
+            </figcaption>
+            <a href="https://github.com/mvmmarcus/be-the-hero"
+              >Ir para repositório</a
+            >
+          </figure>
+          <figure class="portifolio__figure">
+            <div class="portifolio__poster">
+              <img
+                src="./assets/carbometro.png"
+                alt="carbometro"
+                class="portifolio__img"
+              />
+            </div>
+
+            <figcaption>
+              Carbômetro
+            </figcaption>
+            <a
+              href="https://github.com/mvmmarcus/ProjetoCarbometro"
+              >Ir para repositório</a
+            >
+          </figure>
+          <figure class="portifolio__figure">
+            <div class="portifolio__poster">
+              <img
+                src="./assets/react-app-contacts.png"
                 alt="contacts app"
                 class="portifolio__img"
               />
@@ -90,7 +132,7 @@
           <figure class="portifolio__figure">
             <div class="portifolio__poster">
               <img
-                src="../assets/responsive-insta-copy.png"
+                src="./assets/responsive-insta-copy.png"
                 alt="insta copy"
                 class="portifolio__img"
               />
@@ -105,7 +147,7 @@
           <figure class="portifolio__figure">
             <div class="portifolio__poster">
               <img
-                src="../assets/site-estatico-imdb.png"
+                src="./assets/site-estatico-imdb.png"
                 alt="site imdb"
                 class="portifolio__img"
               />

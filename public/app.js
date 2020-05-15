@@ -1,5 +1,12 @@
 const menuItems = document.querySelectorAll("a[href^='#']" || "div[id^='m']");
 menuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.classList.add("touch");
+    setTimeout(() => {
+      item.classList.remove("touch");
+    }, 500);
+  });
+
   item.addEventListener("click", scrollToIdOnClick);
 });
 
